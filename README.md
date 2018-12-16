@@ -62,7 +62,7 @@ sudo resutil newuser -createorg -email "username@company.com" -first "Rxxxx" -la
 ```
 sudo resutil newuser -createorg -email "username@company.com" -first "Rxxxx" -last "Rxxxx" -org "xyz"
 ```
-In this pattern, we will be sending all the speed related offences to `abc` orginzation and location reated offences to `xyz` organization.
+In this pattern, we will be sending all the speed related offences to `abc` organization and location related offences to `xyz` organization.
 
 ### 3. Create rules to detect offences on QRadar
 
@@ -115,7 +115,7 @@ In this pattern, we will be sending all the speed related offences to `abc` orgi
 
 ![](doc/source/images/QRadarCE_RuleWizard_5.png)
 
-* Enter the string as `SPEEDING` while creating rule to detect speed offence and  `LOCATION` while creating rule to detect location offence. This is the string that we will send in the payload. Click `Submit`.
+* Enter the string as `SPEEDING` while creating rule to detect speed offence and `LOCATION` while creating rule to detect location offence. This is the string that we will send in the payload. Click `Submit`.
 
 ![](doc/source/images/QRadarCE_RuleWizard_6.png)     
 
@@ -201,7 +201,7 @@ To work with the QRadar-Resilient Integration Application, perform the following
    
 ### 5. Deploy and Run the Application
 
- * First let us create a speed related offence on QRadar,by execute the following command from the target directory(directory where the offences.jar file is located).
+ * First let us create a speed related offence on QRadar,by execute the following command from the target directory (directory where the `offences.jar` file is located).
  
    ```
    java -cp offences.jar org.app.offences.SendOffences
@@ -220,7 +220,7 @@ To work with the QRadar-Resilient Integration Application, perform the following
       ```
    Go to `offences` tab on QRadar to check if the offence is created.  
 
- * To deploy and run the QRadar-Resilient Integration application, execute the following command from the target directory(directory where the QRadar-Resilient.jar file is located).
+ * To deploy and run the QRadar-Resilient Integration application, execute the following command from the target directory (directory where the `QRadar-Resilient.jar` file is located).
 
    ```
    java -cp QRadar-Resilient.jar org.app.integrate.Task
@@ -256,7 +256,7 @@ To work with the QRadar-Resilient Integration Application, perform the following
    
    ![](doc/source/images/speed_incident.png)
     
-  Similarly let's send a location based offence using the `offences.jar` file and check if the QRadar-Resilient Integration application picks it up dynamically. After the Location based offence is detected in QRadar,the output looks like:
+  Similarly let's send a location based offence using the `offences.jar` file and check if the QRadar-Resilient Integration application picks it up dynamically. After the Location based offence is detected in QRadar, the output looks like:
 
    ***Output on terminal:***
    ```
@@ -299,7 +299,7 @@ Waiting for new offences
    
   ![](doc/source/images/location_incident.png)
    
-This Application works dynamically.It checks for new offences at regular intervals.If a new offence is detected, it will be sent to its respective Resilient organization.
+This Application works dynamically. It checks for new offences at regular intervals. If a new offence is detected, it will be sent to its respective Resilient organization.
   
 Please check [`Java/integrate/src/main/java/org/app/integrate/Resilient.java`](Java/integrate/src/main/java/org/app/integrate/Resilient.java) and [`Java/integrate/src/main/java/org/app/integrate/QRadar.java`](Java/integrate/src/main/java/org/app/integrate/QRadar.java) to add a new offence source and its respective Resilient organization.
   
