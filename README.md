@@ -184,7 +184,7 @@ To work with the QRadar-Resilient Integration Application, perform the following
    > If `mvn` commands fails, please refer to [Pre-requisites](#pre-requisites) to install maven.
 
 
-To work with the QRadar-Resilient Integration Application, perform the following steps.
+To work with the Offences Application, perform the following steps.
 
 * Open a command terminal and navigate to the `java/offences` directory in the repo. Run the command `mvn install`.
 
