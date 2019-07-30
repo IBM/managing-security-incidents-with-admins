@@ -38,7 +38,7 @@ Please follow the below to setup and run this code pattern.
 1. [Clone the repo](#1-clone-the-repo)
 2. [Create organizations on Resilient](#2-create-organizations-on-resilient)
 3. [Create rules to detect offences on QRadar](#3-create-rules-to-detect-offences-on-QRadar)
-4. [Build the Application using Maven](#4-build-then-application-using-maven)
+4. [Build the Applications using Maven](#4-build-then-applications-using-maven)
 5. [Deploy and Run the Application](#5-deploy-and-run-the-application)
 
 ### 1. Clone the repo
